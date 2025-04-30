@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="src_used/homePage/homePage.css">
+  <link rel="stylesheet" href="src_used/header/header.css">
+  <link rel="stylesheet" href="src_used/homePage/homePage_banner/homePage_banner.css">
+  <link rel="stylesheet" href="src_used/global/styles.css">
+
+
+  <script src="src_used/global/GeneralFunctions.js" defer></script>
+  <script src="src_used/homePage/homePage_banner/homePage_banner.js" defer></script>
+  <script src="src_used/header/headerNotification.js" defer></script>
+  <script src="src_used/header/headerSearch.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="Global_header">
+    <header class="header">
+      <div class="header_service_container">
+        <h1 class="header_logo">
+          <a class="logo" href="homePage.html"></a>
+        </h1>
+      </div>
+
+      <div class="header_bar">
+        <button id="header_bar_search_container" class="containers">
+          <div class="searchBar_container hidden">
+            <div class="searchBar_box">
+              <div class="searchBar_search_button">
+                <div id="searchBar_search_icon" class="search_icon header_bar_icon"></div>
+              </div>
+              <input id="search_input" placeholder="Search Artists">
+              <div id="searchBar_search_clear_button">
+                <div class="clearButton_background">
+                  <div class="clearButton_foreground">x</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="search_icon header_bar_icon "></div>
+        </button>
+
+        <button id="header_bar_notifications_container" class="containers">
+          <div id="header_bar_notifications_icon" class="header_bar_icon"></div>
+          <div class="header_bar_notifications_menu hidden">
+            <div class="notifications_menu_container">
+              <h2 class="notifications_menu_title">
+                Notifications
+              </h2>
+              <div class="notifications_menu_area">
+                <div class="notifications_list_container">
+                  <div class="notifications_list_date">
+                    Today
+                  </div>
+                  <div class="notifications_list">
+                    <div class="notifications_item_container">
+                      <img class="Artist_logo"
+                        src="https://phinf.wevpstatic.net/MjAyMzA1MzBfMTkg/MDAxNjg1NDU3ODk5MDE0.FKKdn9RYRUJ25lqMga8pdd42p1Pb335WN9Rgr47uqVcg.LbmfkK-VlDQRN0rKZjuHZuzPZxX78tQr4PvCCef0CGog.JPEG/f6902dd4-b005-466b-921b-5d51aeff4ab5.jpeg?type=s86">
+                      <p class="notifications_text"> this is an example of a notification</p>
+                    </div>
+                    <div class="notifications_item_container">
+                      <img class="Artist_logo"
+                        src="https://phinf.wevpstatic.net/MjAyMzA1MzBfMTkg/MDAxNjg1NDU3ODk5MDE0.FKKdn9RYRUJ25lqMga8pdd42p1Pb335WN9Rgr47uqVcg.LbmfkK-VlDQRN0rKZjuHZuzPZxX78tQr4PvCCef0CGog.JPEG/f6902dd4-b005-466b-921b-5d51aeff4ab5.jpeg?type=s86">
+                      <p class="notifications_text"> this is an example of a notification</p>
+                    </div>
+                    <div class="notifications_item_container">
+                      <img class="Artist_logo"
+                        src="https://phinf.wevpstatic.net/MjAyNDEwMDdfMjgz/MDAxNzI4MjI3MDgzNTkx.HUy2senDpT-jSoMJoFRMARxDukXsQpgqSNM4xxTFHN0g.k5O6yH_F5Wop1dhMzf8nB-rirj2yKh7_eMwZjSz6nikg.JPEG/e67fc3ed-10b4-400e-8534-c26ffd38f8d2.jpeg?type=s86">
+                      <p class="notifications_text"> this is an example of a notification</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </button>
+
+        <div id="header_bar_account_container" class="containers">
+          <div id="header_bar_account_icon" class="header_bar_icon"></div>
+        </div>
+
+        <div id="header_bar_settings_container" class="containers">
+          <div id="header_bar_settings_icon" class="header_bar_icon"></div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div class="body">
+    <div class="HomePage_container">
+
+      <div class="banner_area">
+        <div class="banner_inner_area">
+          <div class="banner_slide-show">
+
+            <div class="banner_container font-white">
+              <div id="Weverse" class="banner_background_image"></div>
+              <div class="banner_badge"></div>
+              <div class="banner_title_area">
+                Subscribe to <br> Digital Membership
+              </div>
+            </div>
+            <div class="banner_container font-white">
+              <div id="RM" class="banner_background_image"></div>
+              <div class="banner_badge">BTS</div>
+              <div class="banner_title_area">
+                RM: Right People <br> Wrong Place
+              </div>
+            </div>
+            <div class="banner_container font-white">
+              <div id="WeverseZone" class="banner_background_image"></div>
+              <div class="banner_badge">Weverse Zone</div>
+              <div class="banner_title_area">
+                2nd LINEUP <br> ANNOUNCEMENT
+              </div>
+            </div>
+            <div class="banner_container">
+              <div id="JIN" class="banner_background_image"></div>
+              <div class="banner_badge">BTS</div>
+              <div class="banner_title_area">
+                #RUNSEOKJIN <br> EP.TOUR in GOYANG
+              </div>
+            </div>
+          </div>
+
+          <div class="banner_slideIndex_bar_container">
+            <div class="banner_slideIndex_bar">
+              <div class="banner_slideIndex_progress"></div>
+              <div class="banner_slideIndex_progress"></div>
+              <div class="banner_slideIndex_progress"></div>
+              <div class="banner_slideIndex_progress"></div>
+            </div>
+          </div>
+          <button id="banner_arrow_prev" class="banner_arrow">
+            <img id="left_arrow_icon" class="arrow_icon"
+              src="media_used/HomePage/Banner/ButtonIcons/banner_arrow_icon_left.png">
+          </button>
+          <button id="banner_arrow_next" class="banner_arrow">
+            <img id="right_arrow_icon" class="arrow_icon"
+              src="media_used/HomePage/Banner/ButtonIcons/banner_arrow_icon_right.png">
+          </button>
+        </div>
+      </div>
+
+      <div class="HomePage_component_area">
+        <div class="HomePage_component_inner_area">
+          <h2 class="HomePage_component_inner_area_title">My Communities</h2>
+          <div class="HomePage_artist_list_container">
+            <div class="HomePage_artist_list">
+
+              <div id="BTS" class="HomePage_artist_item">
+                <a class="HomePage_artist_link" href="communityFeed_bts.html">
+                  <img class="Artist_cover_image"
+                    src="https://phinf.wevpstatic.net/MjAyMzA2MDlfMjA5/MDAxNjg2MjgyOTI4MjM4.uzwN0D1RUzZ7zjv451iLx3k58NbU5tuNGQcNriaLGMog.8BqToW1rnUi10zbpxcvjow74zOJ8mUCJ49z2yGQVaEMg.PNG/8799005373953432ff510aa1-b04b-40f8-8b6d-1e7883e7a481.png?type=f416_354">
+                  <div class="Artist_logo_container">
+                    <img class="Artist_logo"
+                      src="https://phinf.wevpstatic.net/MjAyMzA1MzBfMTkg/MDAxNjg1NDU3ODk5MDE0.FKKdn9RYRUJ25lqMga8pdd42p1Pb335WN9Rgr47uqVcg.LbmfkK-VlDQRN0rKZjuHZuzPZxX78tQr4PvCCef0CGog.JPEG/f6902dd4-b005-466b-921b-5d51aeff4ab5.jpeg?type=s86">
+                  </div>
+                  <div class="Artist_text_container">
+                    <div class="Artist_name">
+                      BTS
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div id="TXT" class="HomePage_artist_item">
+                <a class="HomePage_artist_link">
+                  <img class="Artist_cover_image"
+                    src="https://phinf.wevpstatic.net/MjAyNDEwMjJfMTMg/MDAxNzI5NjA5MTAzNTQ3.HLofH_PfV0K-dD-AldPlct6sd7gCWjBUnqbl4WsvF98g.-fCfj1_VPZ-o-v1ADrbyLTV4OpJeLWW-hzZxMRbg744g.JPEG/a115cfbc-c8d3-4075-870b-0379a265f3da.jpeg?type=f416_354">
+                  <div class="Artist_logo_container">
+                    <img class="Artist_logo"
+                      src="https://phinf.wevpstatic.net/MjAyNDEwMDdfMjgz/MDAxNzI4MjI3MDgzNTkx.HUy2senDpT-jSoMJoFRMARxDukXsQpgqSNM4xxTFHN0g.k5O6yH_F5Wop1dhMzf8nB-rirj2yKh7_eMwZjSz6nikg.JPEG/e67fc3ed-10b4-400e-8534-c26ffd38f8d2.jpeg?type=s86">
+                  </div>
+                  <div class="Artist_text_container">
+                    <div class="Artist_name">
+                      TXT
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div id="weverse_zone" class="HomePage_artist_item">
+                <a class="HomePage_artist_link">
+                  <img class="Artist_cover_image"
+                    src="https://phinf.wevpstatic.net/MjAyNDEwMjhfMjk5/MDAxNzMwMDgxNjM3OTg0.rMCHOqCQBfkGB8jVTmHQreKlVxIlMXjEHkFxwaKufPIg.yh3ytGof7aYJGn1XoIS7UJRQEQ-R0Io3MdEgx1Cf_w0g.PNG/661845219449205085a3bf7a8-66b1-4fe4-91e8-3aa5ce2da650.png?type=f416_354">
+                  <div class="Artist_logo_container">
+                    <img class="Artist_logo"
+                      src="https://phinf.wevpstatic.net/MjAyNDEwMjhfMjkz/MDAxNzMwMDgxNjA1NzIw.3X4iTAkoUyXYrXllscGdKjdBu4Rk2mmk_W3oE4meoKMg.uwZ2_zwnvtR4-7sm8yaCS7FjE2X0MbWeSeZNqne3-5og.PNG/531988257435352809a70731f-f527-4788-a759-768402aee238.png?type=s86">
+                  </div>
+                  <div class="Artist_text_container">
+                    <div class="Artist_name">
+                      Weverse zone
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="HomePage_component_area">
+        <div class="HomePage_component_inner_area">
+          <h2 class="HomePage_component_inner_area_title">Looking for new artists?</h2>
+          <div class="HomePage_artist_list_container">
+            <div class="HomePage_artist_list">
+
+              <div id="ILLIT" class="HomePage_artist_item">
+                <a class="HomePage_artist_link">
+                  <img class="Artist_cover_image"
+                    src="https://phinf.wevpstatic.net/MjAyNDA5MzBfNzMg/MDAxNzI3Njg3NTU2MDEw.u_IClM_1tovoWsb8FB3L1BAA_LnDlk8z6b44oeaHO0cg.snAhXfJBtHp2VPsQja2VsZJOiocTVf1Xyt0L3VnErSYg.JPEG/3aa7f1dc-89a2-4106-a835-5dc3ef061006.jpeg?type=f416_354">
+                  <div class="Artist_logo_container">
+                    <img class="Artist_logo"
+                      src="https://phinf.wevpstatic.net/MjAyNDA5MjNfMTc1/MDAxNzI3MDY1MTgwNDAw.27cAeQo-MH-n-DgjCfEQWYli0yjUxQ55mWZH3yl252kg.TQNhAkcm0XRbnv5KJd5pOB6xyGpV4cqAK-Ff8gcJA44g.JPEG/393d4bbd-dad7-4ca1-a3d0-176a7f4d5c65.jpeg?type=s86">
+                  </div>
+                  <div class="Artist_text_container">
+                    <div class="Artist_name">
+                      ILLIT
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div id="TWS" class="HomePage_artist_item">
+                <a class="HomePage_artist_link">
+                  <img class="Artist_cover_image"
+                    src="https://phinf.wevpstatic.net/MjAyNDExMTVfMjU5/MDAxNzMxNjc1NzUzMDAw.PASkkyDtQLsNogjkYL1Ez31SQUVxt32KFyP5p_4WExwg.t0xjqNhrrofEhs9UgvOU-2iKRri6-v_r-iRVB3GdjCog.JPEG/72d4b0da-d537-481f-804e-d44fdae55cd6.jpeg?type=f416_354">
+                  <div class="Artist_logo_container">
+                    <img class="Artist_logo"
+                      src="https://phinf.wevpstatic.net/MjAyNDExMDRfMTE1/MDAxNzMwNjQ2MDYxNzU0.NgTOVSKgi2Sumj3h3-CItRjYGIET1qJl_rvBzl6nwfYg.8ys8CsSs-PmqSUcZG5J9pT9U9BbA1jNycMqig8G75usg.JPEG/21a4544e-2d5c-4eb8-a2b4-3366aa0817b3.jpeg?type=s86">
+                  </div>
+                  <div class="Artist_text_container">
+                    <div class="Artist_name">
+                      TWS
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div id="ARIANA_GRANDE" class="HomePage_artist_item">
+                <a class="HomePage_artist_link">
+                  <img class="Artist_cover_image"
+                    src="https://phinf.wevpstatic.net/MjAyNDA3MDlfMjU3/MDAxNzIwNDk4MDE4MTkz.9PTE2h64gJyuAkBp5zZcImnm937xAuqPK5cPLpc3NrEg.PcUuVkHNBqMknlWc-os2Hw5IMwAm_XdyKf2_JrXXYKAg.PNG/1376453103105014864dd86b28-daea-410c-8a1f-93682a459705.png?type=f416_354">
+                  <div class="Artist_logo_container">
+                    <img class="Artist_logo"
+                      src="https://phinf.wevpstatic.net/MjAyNDA3MDlfMjUw/MDAxNzIwNDk4MDc5MTk3.IL21-IkepcYYKNoNYaP0_HEShPNKjGGqAKXI00Uhfl4g.w9ve9vo86edc9Mj-5w7PS2lTO3rQ4pJm9f8RdYx7BFUg.JPEG/43529821843565729a6cace3f-8404-4af3-9691-106a29be7daf.jpg?type=s86">
+                  </div>
+                  <div class="Artist_text_container">
+                    <div class="Artist_name">
+                      Ariana Grande
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div id="BOYNEXTDOOR" class="HomePage_artist_item">
+                <a class="HomePage_artist_link">
+                  <img class="Artist_cover_image"
+                    src="https://phinf.wevpstatic.net/MjAyNTAxMDhfNzIg/MDAxNzM2MzQ0NTA0NjMy.NuXgPBCEuKvznGEKrAyaPgF8WFL_rOeXL46AWmWHjBUg.oDSM5vjIbLm_9TS7xDNJzvWsuBa3x2VAFZ5BzJCkM1Ag.JPEG/c9ee0533-17d8-4a37-8fad-aafbea7c272b.jpeg?type=f416_354">
+                  <div class="Artist_logo_container">
+                    <img class="Artist_logo"
+                      src="https://phinf.wevpstatic.net/MjAyNDEyMTZfMTE2/MDAxNzM0MzUzNzg3MTQx.0KaLcf3-LJH1vt7Ya2L7yFk1cBxtAjokO6pY0OMl8a0g.Wpsw7ZP5D1Fb8LNdMLvv2zqjlmD6VTSrYm7ijXcfyd0g.JPEG/36ab879a-26d7-428f-afd9-c8a8617a3b69.jpeg?type=s86">
+                  </div>
+                  <div class="Artist_text_container">
+                    <div class="Artist_name">
+                      BOYNEXTDOOR
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div id="LE_SSERAFIM" class="HomePage_artist_item">
+                <a class="HomePage_artist_link">
+                  <img class="Artist_cover_image"
+                    src="https://phinf.wevpstatic.net/MjAyNTAzMDlfMTk0/MDAxNzQxNTMxODAxMzcx.W8-icjkxTs0cqUwQyNIXiKer0lT0KJya5lyYcT2oHysg.71fAhQq-KPZ13e_jUYuNCXdKPS0w9G4yj8TQ-2jdr-og.PNG/dd84e45c-e3d1-48ae-87cd-366681cee3c8.png?type=f416_354">
+                  <div class="Artist_logo_container">
+                    <img class="Artist_logo"
+                      src="https://phinf.wevpstatic.net/MjAyNTAzMDlfNzcg/MDAxNzQxNTMxNzg4MTMx.IdFDDKNfxq81wjxEuJbXKLX4NSt3tFtN1RycO1yrfscg.SimQKxXoul5dXvpxPWzrkY4y9zgMBCK_cqC-nHOjSAUg.PNG/3c1f1b0b-0f38-4af1-8ecc-66a437ba5fa1.png?type=s86">
+                  </div>
+                  <div class="Artist_text_container">
+                    <div class="Artist_name">
+                      LE SSERAFIM
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div id="BYEON_WOO_SEOK" class="HomePage_artist_item">
+                <a class="HomePage_artist_link">
+                  <img class="Artist_cover_image"
+                    src="https://phinf.wevpstatic.net/MjAyNDA1MDhfMjYx/MDAxNzE1MTQ3OTA3Mjk2.D7Jr2QVWPhW3ZAXwowBkrFXtaybgXHKrveIORmqqI2Yg.ZPeeTs6eKlzBvZHKywdY4hGBbUTVX3MtTwWjIFbaEfMg.PNG/97224597453549802bf445054-d353-4227-a22d-4de3c4f783b7.png?type=f416_354">
+                  <div class="Artist_logo_container">
+                    <img class="Artist_logo"
+                      src="https://phinf.wevpstatic.net/MjAyNDA1MDdfMTkw/MDAxNzE1MDc3ODM4Njg0.kmEY8IEJJocA5DugrE0W9YBrFKT84VO8Mf-qH-EAjpcg.S440gXCP1iZiYgepnaIUYr79VLAu__e7TdTvsEYPV1sg.JPEG/97154922849574656dbc37b81-65f8-4283-8dee-2fca94073b0c.jpg?type=s86">
+                  </div>
+                  <div class="Artist_text_container">
+                    <div class="Artist_name">
+                      BYEON WOO SEOK
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div id="DUA_LIPA" class="HomePage_artist_item">
+                <a class="HomePage_artist_link">
+                  <img class="Artist_cover_image"
+                    src="https://phinf.wevpstatic.net/MjAyNDEwMTVfNDQg/MDAxNzI4OTE5Nzk4Nzc3.8Lb0Kq0RkqnhKUiMLuC3_a4l3Ko-UDQBNBzG00aInhMg.VEobf7r9xa2xFg7X0NeCuj7PjC5c_pkWK5ZrlltHUyMg.PNG/4e5f5d72-9710-48d3-999f-64f88c3f5bf5.png?type=f416_354">
+                  <div class="Artist_logo_container">
+                    <img class="Artist_logo"
+                      src="https://phinf.wevpstatic.net/MjAyNDEwMTVfMTYg/MDAxNzI4OTE5Nzk2MjY0.HNrZ-8KjQrCQeMI_njSSSCaY_KsQv5P-90c3VG-9nQ0g.F74LrOeYAwhFrp-iChtwfN2fnApmZgDDW15aKEgIyRAg.JPEG/6eb21730-af1d-44ca-bb4a-72265f682ad3.jpg?type=s86">
+                  </div>
+                  <div class="Artist_text_container">
+                    <div class="Artist_name">
+                      Dua Lipa
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="HomePage_footer">
+        <footer class="HomePage_footer_inner_area">
+          <p class="Footer_text_container">
+            <span class="Footer_highlight">Company Name</span> Bora Company Inc. <span
+              class="Footer_highlight">CEO</span> Kim Nam Joon <br>
+            <span class="Footer_highlight">Call Center</span> xxxx-xxxx <span class="Footer_highlight">FAX</span> +82
+            x-xxxx-xxxx <br>
+            <span class="Footer_highlight">Address</span><br> The Magic Shop<br>
+            <span class="Footer_highlight">Business Registration Number</span> 061313 <br><br>
+            <span class="Footer_highlight">Hosted by</span> Amazon Web Services, Inc., Naver Cloud <br>
+          </p>
+        </footer>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

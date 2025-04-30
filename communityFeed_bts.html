@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="src_used/communityFeed/communityFeed.css">
+    <link rel="stylesheet" href="src_used/header/header.css">
+    <link rel="stylesheet" href="src_used/communityFeed/communityFeed_modals/ReactModal.css">
+    <link rel="stylesheet" href="src_used/communityFeed/communityFeed_modals/EditorModal.css">
+    <link rel="stylesheet" href="src_used/global/GenericModal.css">
+    <link rel="stylesheet" href="src_used/communityFeed/JoinModal.css">
+    <link rel="stylesheet" href="src_used/global/communities.css">
+    <link rel="stylesheet" href="src_used/global/styles.css">
+
+    <script src="src_used/global/GeneralFunctions.js" defer></script>
+    <script src="src_used/communityFeed/UsernameRequest.js" defer></script>
+    <script src="src_used/communityFeed/communityFeed_modals/communityFeed_postModal.js" defer></script>
+    <script src="src_used/header/headerNotification.js" defer></script>
+    <script src="src_used/header/headerSearch.js" defer></script>
+    <script src="src_used/communityFeed/communityFeed_modals/communityFeed_editorModal.js" defer></script>
+    <script src="src_used/communityFeed/CreateNewPost.js" defer></script>
+    <script src="src_used/communityFeed/CreateNewComment.js" defer></script>
+    <script src="src_used/global/visualButton.js" defer></script>
+
+   
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body class="no-scroll">
+    <div class="Global_header">
+        <header class="header">
+            <div class="header_service_container">
+                <h1 class="header_logo">
+                    <a class="logo" href="homePage.html"></a>
+                </h1>
+                <h2 class="header_community">
+                    BTS
+                </h2>
+            </div>
+
+            <div class="header_bar">
+                <button id="header_bar_search_container" class="containers">
+                    <div class="searchBar_container hidden">
+                        <div class="searchBar_box">
+                            <div class="searchBar_search_button">
+                                <div id="searchBar_search_icon" class="search_icon header_bar_icon"></div>
+                            </div>
+                            <input id="search_input" placeholder="Search Artists">
+                            <div id="searchBar_search_clear_button">
+                                <div class="clearButton_background">
+                                    <div class="clearButton_foreground">x</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="search_icon header_bar_icon "></div>
+                </button>
+
+                <button id="header_bar_notifications_container" class="containers">
+                    <div id="header_bar_notifications_icon" class="header_bar_icon"></div>
+                    <div class="header_bar_notifications_menu hidden">
+                        <div class="notifications_menu_container">
+                            <h2 class="notifications_menu_title">
+                                Notifications
+                            </h2>
+                            <div class="notifications_menu_area">
+                                <div class="notifications_list_container">
+                                    <div class="notifications_list_date">
+                                        Today
+                                    </div>
+                                    <div class="notifications_list">
+                                        <div class="notifications_item_container">
+                                            <img class="Artist_logo"
+                                                src="https://phinf.wevpstatic.net/MjAyMzA1MzBfMTkg/MDAxNjg1NDU3ODk5MDE0.FKKdn9RYRUJ25lqMga8pdd42p1Pb335WN9Rgr47uqVcg.LbmfkK-VlDQRN0rKZjuHZuzPZxX78tQr4PvCCef0CGog.JPEG/f6902dd4-b005-466b-921b-5d51aeff4ab5.jpeg?type=s86">
+                                            <p class="notifications_text"> this is an example of a notification</p>
+                                        </div>
+                                        <div class="notifications_item_container">
+                                            <img class="Artist_logo"
+                                                src="https://phinf.wevpstatic.net/MjAyMzA1MzBfMTkg/MDAxNjg1NDU3ODk5MDE0.FKKdn9RYRUJ25lqMga8pdd42p1Pb335WN9Rgr47uqVcg.LbmfkK-VlDQRN0rKZjuHZuzPZxX78tQr4PvCCef0CGog.JPEG/f6902dd4-b005-466b-921b-5d51aeff4ab5.jpeg?type=s86">
+                                            <p class="notifications_text"> this is an example of a notification</p>
+                                        </div>
+                                        <div class="notifications_item_container">
+                                            <img class="Artist_logo"
+                                                src="https://phinf.wevpstatic.net/MjAyNDEwMDdfMjgz/MDAxNzI4MjI3MDgzNTkx.HUy2senDpT-jSoMJoFRMARxDukXsQpgqSNM4xxTFHN0g.k5O6yH_F5Wop1dhMzf8nB-rirj2yKh7_eMwZjSz6nikg.JPEG/e67fc3ed-10b4-400e-8534-c26ffd38f8d2.jpeg?type=s86">
+                                            <p class="notifications_text"> this is an example of a notification</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+
+                <div id="header_bar_account_container" class="containers">
+                    <div id="header_bar_account_icon" class="header_bar_icon"></div>
+                </div>
+
+                <div id="header_bar_settings_container" class="containers">
+                    <div id="header_bar_settings_icon" class="header_bar_icon"></div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="body">
+        <div class="Community_navigation_container">
+            <nav class="Community_navigation_bar">
+                <a class="Community_navigation_link" href="communityFeed_bts.html">
+                    <span class="Community_navigation_tab">
+                        <span class="Community_navigation_tab-selected"></span>
+                        Fan
+                    </span>
+                </a>
+                <a class="Community_navigation_link">
+                    <span class="Community_navigation_tab">
+                        Artist
+                    </span>
+                </a>
+                <a class="Community_navigation_link" href="communityMedia_bts.html">
+                    <span class="Community_navigation_tab">
+                        Media
+                    </span>
+                </a>
+            </nav>
+        </div>
+        <div class="Community_content_container">
+            <div class="Community_top_container">
+                <div class="Community_welcome_container">
+                    <img class="Artist_cover_image"
+                        src="https://phinf.wevpstatic.net/MjAyMzA2MDlfMjA5/MDAxNjg2MjgyOTI4MjM4.uzwN0D1RUzZ7zjv451iLx3k58NbU5tuNGQcNriaLGMog.8BqToW1rnUi10zbpxcvjow74zOJ8mUCJ49z2yGQVaEMg.PNG/8799005373953432ff510aa1-b04b-40f8-8b6d-1e7883e7a481.png?type=f706_602">
+                    <div class="Community_info_container">
+                        <div class="Community_text_container">
+                            <div class="Community_members">27.9M members</div>
+                            <div class="Community_name"> BTS </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="PersonalProfile_container">
+                    <div class="ProfileImage_container">
+                        <img class="ProfileImage"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4P5yof7KNbcMI8EZr_2DN5OSX9id15yLz_Q&s">
+                    </div>
+                    <div class="Profile_nickname"></div>
+                    <div class="Profile_followersCount">0 Followers</div>
+                </div>
+            </div>
+            <div class="Feed_content_container">
+                <div class="Input_bar_container">
+                    <div class="Input_bar_text_container div_as_button">
+                        <div class="ProfileImage_container">
+                            <img class="ProfileImage"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4P5yof7KNbcMI8EZr_2DN5OSX9id15yLz_Q&s">
+                        </div>
+                        <div class="Input_bar_text_area">
+                            Write a post on Weverse
+                        </div>
+                    </div>
+                    <div class="Input_bar_attach_container">
+                        <div class="photo_icon"></div>
+                    </div>
+                </div>
+                <div class="FeedPost_container">
+                    <div class="FeedPost_list">
+
+                        <div class="Post_item_container" data-index-number="0">
+                            <div class="PostHeader_container">
+                                <div class="PostHeader_profile_container">
+                                    <a class="PostHeader_profileImage_container">
+                                        <img class="ProfileImage"
+                                            src="https://img.icons8.com/?size=100&id=0poZ2aC6dx-6&format=png&color=000000">
+                                    </a>
+                                    <div class="PostHeader_profileText_container">
+                                        <a class="ProfielLink">
+                                            <div class="Profile_nickname_container">
+                                                <div class="Profile_nickname">SPRING DAY</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="PostItem_content_container">
+                                <div class="PostItem_media_container">
+                                    <img class="Content_photo" src="media_used/CommunityFeed/Post/post_media/Bts Spring Day Wallpaper HD.jpg"></img>
+                                </div>
+                                <div class="PostItem_text_container">
+                                    <p class="PostItem_text">
+                                        Let's walk together, towards spring days that seem more like spring days<span
+                                            class="Text_dots">...</span>
+                                        <span class="Text_more hidden">
+                                            TESTING
+                                        </span>
+                                        <button class="Text_more_button">More</button>
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="PostItem_button_container">
+                                <div class="Button_group_container">
+                                    <button class="LikeButton Button_item_container" data-liked="false" data-likes="0">
+                                        <img class="LikeButton_icon Button_icon" src="">
+                                        <span class="LikeButton_count Reaction_count"></span>
+                                    </button>
+                                    <button class="CommentButton Button_item_container">
+                                        <img class="CommentButton_icon Button_icon" src="media_used/CommunityFeed/CommonIcons/weverse_comment_icon.jpg">
+                                        <span class="CommentButton_count Reaction_count">0</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="Post_item_container" data-index-number="1">
+                            <div class="PostHeader_container">
+                                <div class="PostHeader_profile_container">
+                                    <a class="PostHeader_profileImage_container">
+                                        <img class="ProfileImage"
+                                            src="https://img.icons8.com/?size=100&id=49466&format=png&color=000000">
+                                    </a>
+                                    <div class="PostHeader_profileText_container">
+                                        <a class="ProfielLink">
+                                            <div class="Profile_nickname_container">
+                                                <div class="Profile_nickname">Reflection💜</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="PostItem_content_container">
+                                <div class="PostItem_media_container">
+                                    <img class="Content_photo" src="media_used/CommunityFeed/Post/post_media/bts-group-photo-sunset.jpg"></img>
+                                </div>
+                                <div class="PostItem_text_container">
+                                    <p class="PostItem_text">
+                                        We got different stars and stories<span class="Text_dots">...</span>
+                                        <span class="Text_more hidden">
+                                            testing
+                                        </span>
+                                        <button class="Text_more_button">More</button>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="PostItem_button_container">
+                                <div class="Button_group_container">
+                                    <button class="LikeButton Button_item_container" data-liked="false" data-likes="0">
+                                        <img class="LikeButton_icon Button_icon" src="">
+                                        <span class="LikeButton_count Reaction_count"></span>
+                                    </button>
+                                    <button class="CommentButton Button_item_container">
+                                        <img class="CommentButton_icon Button_icon" src="media_used/CommunityFeed/CommonIcons/weverse_comment_icon.jpg">
+                                        <span class="CommentButton_count Reaction_count">0</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="Post_item_container" data-index-number="2">
+                            <div class="PostHeader_container">
+                                <div class="PostHeader_profile_container">
+                                    <a class="PostHeader_profileImage_container">
+                                        <img class="ProfileImage"
+                                            src="https://img.icons8.com/?size=100&id=51151&format=png&color=000000">
+                                    </a>
+                                    <div class="PostHeader_profileText_container">
+                                        <a class="ProfielLink">
+                                            <div class="Profile_nickname_container">
+                                                <div class="Profile_nickname"> Fake Love</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="PostItem_content_container">
+                                <div class="PostItem_media_container">
+                                    <img class="Content_photo" src="media_used/CommunityFeed/Post/post_media/fake_love_lantern.jpg"></img>
+                                </div>
+                                <div class="PostItem_text_container">
+                                    <p class="PostItem_text">
+                                        I grew a flower that can't be bloomed
+                                        In a dream that can't come true
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="PostItem_button_container">
+                                <div class="Button_group_container">
+                                    <button class="LikeButton Button_item_container" data-liked="false" data-likes="0">
+                                        <img class="LikeButton_icon Button_icon" src="">
+                                        <span class="LikeButton_count Reaction_count"></span>
+                                    </button>
+                                    <button class="CommentButton Button_item_container">
+                                        <img class="CommentButton_icon Button_icon" src="media_used/CommunityFeed/CommonIcons/weverse_comment_icon.jpg">
+                                        <span class="CommentButton_count Reaction_count">0</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="Post_item_container" data-index-number="3">
+                            <div class="PostHeader_container">
+                                <div class="PostHeader_profile_container">
+                                    <a class="PostHeader_profileImage_container">
+                                        <img class="ProfileImage"
+                                            src="https://img.icons8.com/?size=100&id=6CHUeXwSVsul&format=png&color=000000">
+                                    </a>
+                                    <div class="PostHeader_profileText_container">
+                                        <a class="ProfielLink">
+                                            <div class="Profile_nickname_container">
+                                                <div class="Profile_nickname"> B.S.T.</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="PostItem_content_container">
+                                <div class="PostItem_media_container">
+                                    <img class="Content_photo" src="media_used/CommunityFeed/Post/post_media/bst_jk_swing-chair.jpg"></img>
+                                </div>
+                                <div class="PostItem_text_container">
+                                    <p class="PostItem_text">
+                                        But your wings are the devil's. Before your sweetness there is bitter.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="PostItem_button_container">
+                                <div class="Button_group_container">
+                                    <button class="LikeButton Button_item_container" data-liked="false" data-likes="0">
+                                        <img class="LikeButton_icon Button_icon" src="">
+                                        <span class="LikeButton_count Reaction_count"></span>
+                                    </button>
+                                    <button class="CommentButton Button_item_container">
+                                        <img class="CommentButton_icon Button_icon" src="media_used/CommunityFeed/CommonIcons/weverse_comment_icon.jpg">
+                                        <span class="CommentButton_count Reaction_count">0</span>
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="JoinModal_container" class="modalOverlay ">
+
+        <div class="JoinModal">
+            <div class="JoinModal_profileImage_container">
+                <img class="ProfileImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4P5yof7KNbcMI8EZr_2DN5OSX9id15yLz_Q&s">
+            </div>
+            <div class="JoinModal_nickname_container">
+                <div class="JoinModal_nickname_title">Nickname</div>
+                <div class="JoinModal_username_input_container">
+                    <input id="join_username_input">
+                </div>
+            </div>
+            <div class="JoinModal_submit_container">
+                <button id="join_submit_button">Sign up now</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="WriteModal_container" class="modalOverlay hidden">
+
+        <div class="WriteModal">
+            <div class="WriteModal_title_area">
+                <div class="title">Write a post</div>
+                <div class="WriteModal_artist">BTS</div>
+            </div>
+            <div class="WriteModal_content_container">
+                <div class="Editor">
+                    <textarea id="Editor_box"></textarea>
+                </div>
+            </div>
+            <div class="WriteModal_footer_container">
+                <div class="WriteModal_footer_area">
+                    <div class="WriteModalFooter_button_area">
+                        <div class="photo_icon"></div>
+                    </div>
+                    <div class="WriteModalFooter_button_area">
+                        <button id="WriteModalFooter_button_submit">Add</button>
+                    </div>
+                </div>
+            </div>
+            <button class="CloseButton_container">
+                <div class="CloseButton_text">CLOSE</div>
+            </button>
+        </div>
+    </div>
+
+    <div id="ReactModal_container" class="modalOverlay hidden">
+
+        <div class="ReactModal">
+            <div class="Modal_post_container">
+
+                <div class="PostHeader_container">
+                    <div class="PostHeader_profile_container">
+                        <a class="PostHeader_profileImage_container">
+                            <img class="ProfileImage" src="">
+                        </a>
+                        <div class="PostHeader_profileText_container">
+                            <a class="ProfielLink">
+                                <div class="Profile_nickname_container">
+                                    <div class="Profile_nickname"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Modal_post_body"></div>
+
+                <div class="Modal_action_container">
+                    <button class="LikeButton Button_item_container" data-liked="false" data-likes="0">
+                        <img class="LikeButton_icon Button_icon" src="">
+                        <span class="LikeButton_count Reaction_count"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="Modal_comment_container">
+                <div class="Comment_title_container">
+                    <div class="Comment_title_text">
+                        <span class="Comment_count">0</span>
+                        <span> comment</span><span class="Comment_plural ">s</span>
+                    </div>
+                </div>
+                <div class="Comment_scrollable_container">
+                    <div class="Comment_list_container">
+
+                        <div class="Comment_item_container">
+                            <div class="CommentItem_header_container">
+                                <a class="CommentItemHeader_profileImage_container">
+                                    <img class="ProfileImage" src="media_used/ProfileImages/icon_empty_profile.png">
+                                </a>
+                                <div class="CommentItemHeader_profileText_container">
+                                    <div class="Profile_nickname_container">
+                                        <div class="Profile_nickname">Omelas</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="CommentItem_comment_text">
+                                this is the text of a comment
+                            </div>
+                        </div>
+
+                        <div class="Comment_item_container">
+                            <div class="CommentItem_header_container">
+                                <a class="CommentItemHeader_profileImage_container">
+                                    <img class="ProfileImage" src="media_used/ProfileImages/proflie_icon1.jpeg">
+                                </a>
+                                <div class="CommentItemHeader_profileText_container">
+                                    <div class="Profile_nickname_container">
+                                        <div class="Profile_nickname">TaNie</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="CommentItem_comment_text">
+                                this is the text of a comment
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="Comment_input_container">
+                    <div class="Comment_input_area">
+                        <div class="Comment_input_box">
+                            <div class="Comment_text_area_container">
+                                <textarea id="comment_text_area" placeholder="Write a comment"></textarea>
+                            </div>
+                            <button class="Comment_input_send_button">
+                                <img id="comment_send_arrow_icon" src="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <button class="CloseButton_container">
+                <div class="CloseButton_text">CLOSE</div>
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
